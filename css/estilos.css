@@ -1,28 +1,33 @@
-/* main.css */
-
 /* General */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #F279B2 50%, #94BF80 50%);
+   
 }
+
+
 
 /* Header */
 header {
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+    padding: 10px 20px;
 }
 
-.navbar {
-    padding: 0.5rem 1rem;
+header .navbar {
+    background-color: #94BF80 !important; /* Verde con !important */
+    border-radius: 40px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 20px; /* Espaciado horizontal desde los extremos */
+    padding: 10px 20px; /* Espaciado interno */
 }
 
+/* Navbar links */
 .navbar-brand {
+    font-size: 1.8rem;
     font-weight: bold;
-    color: #333;
+    color: #222;
 }
 
 .navbar-brand:hover {
@@ -30,71 +35,178 @@ header {
 }
 
 .nav-link {
-    color: #555;
-    font-weight: 500;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
 }
 
 .nav-link:hover {
     color: #007bff;
 }
 
-/* Main Sections */
-main {
+
+/* Sección principal */
+section.text-center {
+    margin: 30px;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 900px;
+    background-color: #ffebf4; /* Fondo suave rosado */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2, h3 {
-    color: #222;
-    margin-bottom: 20px;
+section.text-center h1,
+section.text-center h2 {
+    color: #333;
     font-weight: bold;
-    text-align: center;
 }
 
-p {
+section.text-center h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: "Bricolage Grotesque", sans-serif;
+   
+}
+
+section.text-center h2 {
+    font-size: 1.8rem;
+    color: #ff69b4; /* Color rosa vibrante */
+    margin-bottom: 20px;
+}
+
+section.text-center p {
+    font-size: 1.2rem;
+    color: #555;
     line-height: 1.6;
-    text-align: justify;
+    text-align: left;
+    margin-top: 10px;
 }
 
-/* Images */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px;
-}
-
-/* Buttons */
+/* Botón */
 button a, .btn {
     display: inline-block;
     padding: 10px 20px;
     color: #fff;
-    background-color: #007bff;
+    background-color: #28a745; /* Verde botón */
     border: none;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 16px;
     font-weight: bold;
+    transition: background-color 0.3s ease;
     text-align: center;
-    transition: background-color 0.3s;
 }
 
 button a:hover, .btn:hover {
+    background-color: #1e7e34;
+}
+
+.titulogrande{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    
+    font-style: normal;
+    
+    font-size : 15em;
+    padding: 0;
+    line-height: 0.7; /* Reduce el espacio entre las líneas */
+     
+}
+
+.titulopaginasc{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    
+    font-style: normal;
+    
+    font-size : 3em;
+    padding: 1;
+    line-height: 0.7; /* Reduce el espacio entre las líneas */
+     
+}
+
+
+.titulopequeño{
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+ 
+    font-style: italic;
+    color: #fff;
+    font-size : 1em;
+}
+
+.rol{ 
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+ 
+    font-style: italic;
+    color: #fff;
+    font-size : 1.5em;
+}
+
+/* Imagenes */
+section img {
+    max-width: 100%;
+
+   
+}
+
+/* Layout de segunda página */
+.container-posters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff4e6; /* Fondo crema */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-posters img {
+    width: 40%;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.container-posters .text {
+    flex: 1;
+    padding: 20px;
+}
+
+.container-posters .text h1 {
+    font-size: 2rem;
+    color: #e63946;
+    text-align: center;
+}
+
+.container-posters .text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.container-posters .text a {
+    margin-top: 15px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.container-posters .text a:hover {
     background-color: #0056b3;
 }
 
 /* Footer */
 footer {
-    background-color: #f1f1f1;
     padding: 10px 0;
     text-align: center;
-    border-top: 1px solid #ddd;
+   
+    background: linear-gradient(to right, #F279B2 50%, #94BF80 50%);
 }
+
 
 footer ul {
     list-style: none;
@@ -104,31 +216,19 @@ footer ul {
 
 footer ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 footer ul li a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     font-weight: 500;
 }
 
 footer ul li a:hover {
     color: #007bff;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    h1, h2, h3 {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .btn {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
+.rectangulorosa{
+    background-color: #FFDFF9;
+    height: auto;
 }
