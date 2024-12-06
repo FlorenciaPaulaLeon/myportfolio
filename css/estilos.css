@@ -262,6 +262,50 @@ footer ul li a:hover {
 .menu-versionmobile{
     display: none;
 }
+
+#framecanva{
+    position: relative;
+     width: 100%;
+      height: 0; 
+      padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); 
+ margin-top: 1.6em; 
+ margin-bottom: 0.9em; 
+ overflow: hidden;
+ border-radius: 8px; 
+ will-change: transform;
+}
+
+.estiloslazy{
+    position: absolute; 
+    width: 100%; 
+    height: 100%;
+     top: 0; 
+     left: 0;
+      border: none; 
+      padding: 0;
+      margin: 0;
+}
+
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.buttonstory {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #60bb6f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin: 2px;
+}
+.button:hover {
+    background-color: #0056b3;
+}
+
   
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
