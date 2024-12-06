@@ -1,91 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Proyecto de Ilustración / Florencia León</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Proyecto de ilustración // Florencia León</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-   </head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/estilos.css">
+</head>
 <body>
-   <header>
-    <nav>
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="../disenografico/index.html">Diseño Gráfico</a></li>
-            <li><a href="../disenoweb/index.html">Diseño Web</a></li>
-            <li><a href="../stagedesing/index.html">Diseño Escénico</a></li>
-            <li><a href="../storyboard/index.html">Storyboard</a></li>
-            <li><a href="../juego/index.html">Juego</a></li>
-        </ul>
-    </nav>
-    <h1>Pósters Ilustrados de Películas</h1>
-   </header>
-   <section>
-    <p>Este proyecto surge de mi interés por el arte visual y el cine. Realicé una colección de pósters ilustrados utilizando tanto técnicas digitales como tradicionales. <br>
-       Cada diseño está pensado para transmitir la esencia de la película, utilizando colores, formas y detalles que cuentan su historia de manera visual. Este trabajo refleja mi fascinación por contar historias a través de la ilustración.
-    </p>
-   </section>
-   <section>
-    <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        </div>
-        <div class="carousel-inner">
-        
-          <div class="carousel-item">
-            <img src="img/ilusbrooklynuno.jpg" class="d-block w-100" alt="Diseño con síntesis visual">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Película Brooklyn (2015)</h5>
-              <p>Una obra dirigida por John Crowley, basada en la novela de Colm Tóibín, adaptada por Nick Hornby.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/ilusbrooklyndos.jpg" class="d-block w-100" alt="Ilustración inspirada en Brooklyn">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Película "Brooklyn" (2015)</h5>
-              <p>Un emotivo relato adaptado de la obra literaria de Colm Tóibín por Nick Hornby.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/ilusmamamiauno.jpg" class="d-block w-100" alt="Ilustración para Mamma Mia">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Película "Mamma Mia" (2008)</h5>
-              <p>Un musical basado en los éxitos de ABBA, con guion de Catherine Johnson.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/ilusmamamiados.jpg" class="d-block w-100" alt="Ilustración inspirada en Mamma Mia">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Película "Mamma Mia" (2008)</h5>
-              <p>Un homenaje visual al icónico musical que combina drama y música.</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Siguiente</span>
-        </button>
-      </div>
-    <button>
-      <a href="index.html" class="button">Volver a Ilustracion</a>
 
-    </button>
-   </section>
-   <footer>
-    <ul>
-      <li><a href="../complementarias/quiensoy.html">Quién soy</a></li>
-      <li><a href="../complementarias/contacto.html">Contacto</a></li>
-    </ul>
+   <header>
+    
+       <nav class="navbar bg-body-tertiary fixed-top">
+       
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">Florencia León</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> Florencia León</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="../ilustracion/index.html">Ilustración</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../disenoweb/index.html">Diseño Web</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../stagedesing/index.html">Stage Design</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../storyboard/index.html">Storyboard / Animación</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../juego/index.html">Juego</a>
+                </li>
+              </ul>
+              <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+   </header>
+   <div class="rectangulorosa">   
+   <main class="container">
+    <div class="row justify-content-center">
+       <section class="col-sm-6 col-md-5">
+        <h2>posters de peliculas ilustrados</h2>
+        <p>El proyecto de posters de películas ilustrados busca reinterpretar visualmente clásicos del cine a través de ilustraciones únicas, utilizando técnicas digitales y a mano. Cada poster refleja la esencia de la película, destacando sus aspectos emocionales y simbólicos más que los elementos visuales convencionales.</p>
+
+        <p>Cada ilustración se adapta al tono de la película, ya sea minimalista o retro, con el fin de crear una conexión emocional con el espectador. Este proyecto ofrece una nueva visión del cine y demuestra cómo las ilustraciones pueden transformar la percepción de una historia.</p>
+        
+        
+       </section>
+
+       <section class="col-sm-6 col-md-4">
+           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+               <div class="carousel-indicators">
+                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></button>
+               </div>
+               <div class="carousel-inner">
+                   <div class="carousel-item active">
+                       <img src="img/ilusbrooklynuno.jpg" class="d-block w-100" alt="ilustracion de la pelicula Broocklyn">
+                       
+                   </div>
+                   <div class="carousel-item">
+                       <img src="img/ilusbrooklyndos.jpg" class="d-block w-100" alt="ilustracion de la pelicula Broocklyn">
+                       
+                   </div>
+                   <div class="carousel-item">
+                       <img src="img/ilusmamamiauno.jpg" class="d-block w-100" alt="ilustracion de la pelicula Mamma mia">
+                       
+                   </div>
+                   <div class="carousel-item">
+                       <img src="img/ilusmamamiados.jpg" class="d-block w-100" alt="ilustracion de la pelicula Mamma mia">
+                       
+                   </div>
+               </div>
+               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                   <span class="visually-hidden">Anterior</span>
+               </button>
+               <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                   <span class="visually-hidden">Siguiente</span>
+               </button>
+           </div>
+           <div class="mt-4 text-center">
+               <a href="index.html" class="btn btn-secondary">Volver a Diseño Gráfico</a>
+           </div>
+       </section>
+       </div>
+   </main>
+</div> 
+   <footer class="text-center mt-4 py-3">
+       <ul class="list-inline">
+           <li class="list-inline-item"><a href="../complementarias/quiensoy.html">Quién Soy</a></li>
+           <li class="list-inline-item"><a href="../complementarias/contacto.html">Contacto</a></li>
+       </ul>
    </footer>
+   
 </body>
 </html>

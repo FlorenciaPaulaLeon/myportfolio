@@ -228,7 +228,23 @@ footer ul li a {
 footer ul li a:hover {
     color: #007bff;
 }
-.rectangulorosa{
-    background-color: #FFDFF9;
-    height: auto;
+
+.rectangulorosa {
+    background-color: #f9c8d0; /* Color de fondo rosa */
+    border: 3px solid #f9c8d0; /* Borde del mismo color */
+    padding: 20px; /* Espaciado interno */
+    margin: 50px auto; /* Espaciado externo */
+  
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centrado del contenido */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+  }
+  
+  .naranja{
+    background-color: #F27F3D;
+  }
+
+  .naranja footer {
+    background-color: #F27F3D;
 }
+  
