@@ -258,4 +258,54 @@ footer ul li a:hover {
   .naranja footer {
     background-color: #F27F3D;
 }
+
+.menu-versionmobile{
+    display: none;
+}
   
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    
+
+    body{
+        background: linear-gradient(to right, #F279B2 50%, #F279B2 50%);
+      
+    }
+    .menu-versionmobile{
+        display: inline-block;
+    }
+
+
+    .menu-versionmobile {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+  .menu-versionmobile ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+    
+   .menu-versionmobile ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 500;
+        font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+ 
+    font-style: italic;
+    color: #fff;
+    font-size : 1.5em;
+    margin-inline-start:  4px; 
+
+    }
+    
+   .menu-versionmobile ul li a:hover {
+        color: #007bff;
+    }
+            
+        footer {display: none;}
+}
+    
+
