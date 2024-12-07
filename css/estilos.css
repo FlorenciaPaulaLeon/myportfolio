@@ -109,6 +109,7 @@ button a:hover, .btn:hover {
     font-size : 15em;
     padding: 0;
     line-height: 0.7; /* Reduce el espacio entre las líneas */
+    margin-top: 0.1em;
      
 }
 
