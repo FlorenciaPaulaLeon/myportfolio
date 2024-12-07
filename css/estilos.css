@@ -306,6 +306,30 @@ footer ul li a:hover {
     background-color: #0056b3;
 }
 
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.carta {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.carta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    backface-visibility: hidden;
+    transition: transform 0.3s;
+}
+
   
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
