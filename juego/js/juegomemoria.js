@@ -38,26 +38,56 @@ function generarCartasMezcladas() {
     return pares.sort(() => Math.random() - 0.5); // Mezclar aleatoriamente
 }
 
+let turnoJugador = 1; // Inicializamos el turno con el Jugador 1
+
+function cambiarTurno() {
+    turnoJugador = turnoJugador === 1 ? 2 : 1; // Cambia entre 1 y 2
+    const nombreTurno = turnoJugador === 1 ? nombreJugador1 : nombreJugador2;
+
+    // Actualiza el mensaje en la pantalla para indicar de quién es el turno
+    document.querySelector('#turnoActual').textContent = `Turno de: ${nombreTurno}`;
+}
+
+let rondaActual = 1; // Contador de rondas
+
+function siguienteRonda() {
+    rondaActual++;
+
+    // Reiniciar tablero pero mantener puntajes y turno
+    cartasTablero = generarCartasMezcladas();
+    mostrarTablero();
+    cartasSeleccionadas = [];
+
+    // Desactivar el botón de "Siguiente Ronda"
+    document.querySelector('#btnNextRound').disabled = true;
+
+    // Actualizar información en pantalla
+    document.querySelector('#resultadoTurno').textContent = `${nombreJugador1}: ${puntosJugador1} puntos - ${nombreJugador2}: ${puntosJugador2} puntos`;
+    document.querySelector('#rondaActual').textContent = `Ronda: ${rondaActual}`;
+}
+
 function verificarPareja() {
     const [index1, index2] = cartasSeleccionadas;
     const carta1 = cartasTablero[index1];
     const carta2 = cartasTablero[index2];
 
     if (carta1.pareja === carta2.valor) {
-        // Son una pareja
         actualizarPuntaje();
         carta1.descubierta = true;
         carta2.descubierta = true;
+
+        // Si todas las cartas están descubiertas, habilitar el botón de "Siguiente Ronda"
+        if (cartasTablero.every(carta => carta.descubierta)) {
+            document.querySelector('#btnNextRound').disabled = false;
+        }
     } else {
-        // No son una pareja
         ocultarCarta(index1);
         ocultarCarta(index2);
+        cambiarTurno();
     }
 
     cartasSeleccionadas = [];
-    cambiarTurno();
 }
-
 
 function mostrarTablero() {
     const tablero = document.querySelector('#tablero');
@@ -128,3 +158,4 @@ function finalizarJuego() {
 }
 
 document.querySelector('#btnStart').addEventListener('click', iniciarJuegoMemoria);
+document.querySelector('#btnNextRound').addEventListener('click', siguienteRonda);
