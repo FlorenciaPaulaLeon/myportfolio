@@ -314,13 +314,7 @@ footer ul li a:hover {
     align-items: center;
 }
 
-.carta {
-    width: 80px;
-    height: 80px;
-    position: relative;
-    cursor: pointer;
-    perspective: 1000px;
-}
+
 
 .carta img {
     width: 100%;
@@ -328,7 +322,15 @@ footer ul li a:hover {
     object-fit: cover;
     backface-visibility: hidden;
     transition: transform 0.3s;
+    display: none; /* Las imágenes estarán ocultas por defecto */
 }
+
+
+
+.carta .reverso {
+    display: block; /* Mostrar la imagen del reverso solo cuando está oculta */
+}
+
 
   
 /* Estilos para dispositivos móviles */

@@ -2,6 +2,10 @@ let cartasTablero = []; // Cartas mezcladas en el tablero
 let cartasSeleccionadas = []; // Cartas seleccionadas por el jugador actual
 const limiteRondas = 3; // Límite de rondas
 
+document.querySelector('#resultadoTurno').style.display = 'none';
+document.querySelector('#rondaActual').style.display = 'none';
+document.querySelector('#turnoActual').style.display = 'none';
+document.querySelector('#btnNextRound').style.display = 'none';
 
 function iniciarJuegoMemoria() {
     nombreJugador1 = prompt('Ingrese el nombre del Jugador 1:');
@@ -15,7 +19,7 @@ function iniciarJuegoMemoria() {
     // Reiniciar variables
     puntosJugador1 = 0;
     puntosJugador2 = 0;
-    rondaActual = 0;
+    rondaActual = 1; // Inicia en la ronda 1
     turnoJugador = 1;
     cartasSeleccionadas = [];
 
@@ -23,9 +27,21 @@ function iniciarJuegoMemoria() {
     cartasTablero = generarCartasMezcladas();
     mostrarTablero();
 
+    // Mostrar los elementos ocultos
+    document.querySelector('#resultadoTurno').style.display = 'block';
+    document.querySelector('#rondaActual').style.display = 'block';
+    document.querySelector('#turnoActual').style.display = 'block';
+    document.querySelector('#btnNextRound').style.display = 'inline-block';
+
+    // Inicializar los textos en pantalla
     document.querySelector('#resultadoTurno').textContent = `${nombreJugador1}: 0 puntos - ${nombreJugador2}: 0 puntos`;
+    document.querySelector('#rondaActual').textContent = `Ronda: ${rondaActual}`;
+    document.querySelector('#turnoActual').textContent = `Turno de: ${nombreJugador1}`;
+
+    // Ocultar botón de inicio
     document.querySelector('#btnStart').style.display = 'none';
 }
+
 
 function generarCartasMezcladas() {
     const pares = [
