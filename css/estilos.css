@@ -292,7 +292,7 @@ footer ul li a:hover {
     background-color: #0056b3;
 }
 
-.buttonstory {
+#btnStart, .buttonstory {
     display: inline-block;
     padding: 10px 20px;
     background-color: #60bb6f;

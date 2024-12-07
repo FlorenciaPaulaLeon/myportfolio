@@ -40,6 +40,8 @@ function iniciarJuegoMemoria() {
 
     // Ocultar botón de inicio
     document.querySelector('#btnStart').style.display = 'none';
+    document.querySelector('#instrucciones').style.display = 'none';
+    document.querySelector('#pjuego').style.display = 'inline-block';
 }
 
 
@@ -191,6 +193,7 @@ function finalizarJuego() {
 
     // Mostrar solo el botón de reinicio
     document.querySelector('#btnStart').style.display = 'inline-block';
+    document.querySelector('#instrucciones').style.display = 'inline-block';
 }
 
 
