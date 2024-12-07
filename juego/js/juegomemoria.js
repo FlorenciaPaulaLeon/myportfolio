@@ -1,5 +1,7 @@
 let cartasTablero = []; // Cartas mezcladas en el tablero
 let cartasSeleccionadas = []; // Cartas seleccionadas por el jugador actual
+const limiteRondas = 3; // Límite de rondas
+
 
 function iniciarJuegoMemoria() {
     nombreJugador1 = prompt('Ingrese el nombre del Jugador 1:');
@@ -32,7 +34,9 @@ function generarCartasMezcladas() {
         { valor: 'logo3.jpg', pareja: 'logo4.jpg' },
         { valor: 'logo4.jpg', pareja: 'logo3.jpg' },
         { valor: 'logo5.jpg', pareja: 'logo6.jpg' },
-        { valor: 'logo6.jpg', pareja: 'logo5.jpg' }
+        { valor: 'logo6.jpg', pareja: 'logo5.jpg' },
+        { valor: 'logo7.jpg', pareja: 'logo8.jpg' },
+        { valor: 'logo8.jpg', pareja: 'logo7.jpg' }
     ];
 
     return pares.sort(() => Math.random() - 0.5); // Mezclar aleatoriamente
@@ -51,19 +55,23 @@ function cambiarTurno() {
 let rondaActual = 1; // Contador de rondas
 
 function siguienteRonda() {
-    rondaActual++;
+    if (rondaActual < limiteRondas) {
+        rondaActual++;
 
-    // Reiniciar tablero pero mantener puntajes y turno
-    cartasTablero = generarCartasMezcladas();
-    mostrarTablero();
-    cartasSeleccionadas = [];
+        // Reiniciar tablero pero mantener puntajes y turno
+        cartasTablero = generarCartasMezcladas();
+        mostrarTablero();
+        cartasSeleccionadas = [];
 
-    // Desactivar el botón de "Siguiente Ronda"
-    document.querySelector('#btnNextRound').disabled = true;
+        // Desactivar el botón de "Siguiente Ronda"
+        document.querySelector('#btnNextRound').disabled = true;
 
-    // Actualizar información en pantalla
-    document.querySelector('#resultadoTurno').textContent = `${nombreJugador1}: ${puntosJugador1} puntos - ${nombreJugador2}: ${puntosJugador2} puntos`;
-    document.querySelector('#rondaActual').textContent = `Ronda: ${rondaActual}`;
+        // Actualizar información en pantalla
+        document.querySelector('#resultadoTurno').textContent = `${nombreJugador1}: ${puntosJugador1} puntos - ${nombreJugador2}: ${puntosJugador2} puntos`;
+        document.querySelector('#rondaActual').textContent = `Ronda: ${rondaActual}`;
+    } else {
+        finalizarJuego(); // Mostrar ganador al llegar al límite
+    }
 }
 
 function verificarPareja() {
@@ -151,11 +159,25 @@ function finalizarJuego() {
         ? `${nombreJugador1} gana con ${puntosJugador1} puntos!`
         : puntosJugador1 < puntosJugador2
         ? `${nombreJugador2} gana con ${puntosJugador2} puntos!`
-        : 'Es un empate!';
-        
-    alert(mensaje);
+        : '¡Es un empate!';
+
+    alert(`Juego finalizado.\n${mensaje}`);
+
+    // Limpiar el tablero
+    const tablero = document.querySelector('#tablero');
+    tablero.innerHTML = '';
+
+    // Ocultar elementos relacionados con el juego
+    document.querySelector('#resultadoTurno').style.display = 'none';
+    document.querySelector('#rondaActual').style.display = 'none';
+    document.querySelector('#turnoActual').style.display = 'none';
+    document.querySelector('#btnNextRound').style.display = 'none';
+
+    // Mostrar solo el botón de reinicio
     document.querySelector('#btnStart').style.display = 'inline-block';
 }
+
+
 
 document.querySelector('#btnStart').addEventListener('click', iniciarJuegoMemoria);
 document.querySelector('#btnNextRound').addEventListener('click', siguienteRonda);
