@@ -16,11 +16,11 @@ header {
 }
 
 header .navbar {
-    background-color: #94BF80 !important; /* Verde con !important */
-    border-radius: 40px; /* Bordes redondeados */
+    background-color: #94BF80 !important; 
+    border-radius: 40px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0 20px; /* Espaciado horizontal desde los extremos */
-    padding: 10px 20px; /* Espaciado interno */
+    margin: 0 20px; 
+    padding: 10px 20px; 
 }
 
 /* Navbar links */
@@ -49,7 +49,7 @@ header .navbar {
 section.text-center {
     margin: 30px;
     padding: 20px;
-    background-color: #ffebf4; /* Fondo suave rosado */
+    background-color: #ffebf4; 
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -86,7 +86,7 @@ button a, .btn {
     display: inline-block;
     padding: 10px 20px;
     color: #fff;
-    background-color: #28a745; /* Verde botón */
+    background-color: #28a745; 
     border: none;
     text-decoration: none;
     border-radius: 8px;
@@ -102,54 +102,46 @@ button a:hover, .btn:hover {
 
 .titulogrande{
     font-family: "Bricolage Grotesque", sans-serif;
-    font-optical-sizing: auto;
+    
     
     font-style: normal;
     
     font-size : 15em;
     padding: 0;
-    line-height: 0.7; /* Reduce el espacio entre las líneas */
+    line-height: 0.7; 
     margin-top: 0.1em;
      
 }
 
 .titulopaginasc{
     font-family: "Bricolage Grotesque", sans-serif;
-    font-optical-sizing: auto;
     
     font-style: normal;
     
     font-size : 3em;
-    padding: 1;
+    padding: 1px;
     line-height: 0.7; 
      
 }
 
 .tituloquiensoy{
     font-family: "Bricolage Grotesque", sans-serif;
-    font-optical-sizing: auto;
-    
     font-style: normal;
-    
-    font-size : 6em;
-    padding: 2;
-    line-height: 0.7; /
+   font-size : 6em;
+    padding: 2px;
+    line-height: 0.7; 
      
 }
 
 .titulopequeño{
     font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
- 
-    font-style: italic;
+     font-style: italic;
     color: #fff;
     font-size : 1em;
 }
 
 .rol{ 
     font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
- 
     font-style: italic;
     color: #fff;
     font-size : 1.5em;
@@ -242,14 +234,14 @@ footer ul li a:hover {
 }
 
 .rectangulorosa {
-    background-color: #f9c8d0; /* Color de fondo rosa */
-    border: 3px solid #f9c8d0; /* Borde del mismo color */
-    padding: 20px; /* Espaciado interno */
-    margin: 50px auto; /* Espaciado externo */
+    background-color: #f9c8d0; 
+    border: 3px solid #f9c8d0; 
+    padding: 20px; 
+    margin: 50px auto; 
   
-    border-radius: 10px; /* Bordes redondeados */
-    text-align: center; /* Centrado del contenido */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+    border-radius: 10px; 
+    text-align: center; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .naranja{
@@ -323,13 +315,13 @@ footer ul li a:hover {
     object-fit: cover;
     backface-visibility: hidden;
     transition: transform 0.3s;
-    display: none; /* Las imágenes estarán ocultas por defecto */
+    display: none; 
 }
 
 
 
 .carta .reverso {
-    display: block; /* Mostrar la imagen del reverso solo cuando está oculta */
+    display: block; 
 }
 
 
@@ -363,7 +355,7 @@ footer ul li a:hover {
         color: #ffffff;
         font-weight: 500;
         font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
+  
  
     font-style: italic;
     color: #fff;
