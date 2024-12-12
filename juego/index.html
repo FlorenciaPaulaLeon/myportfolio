@@ -8,13 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
-   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/estilos.css">
 </head>
+
 <body>
     <div class="rectangulorosa">
 
@@ -22,55 +21,48 @@
         <header>
             <nav class="navbar navbar-expand-lg bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="../index.html">Florencia León</a>
+                    <a class="navbar-brand" href="../index.html">Florencia Leon</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="../disenografico/index.html">Diseño Gráfico</a>
+                            </li>
                             <li class="nav-item"><a class="nav-link" href="../ilustracion/index.html">Ilustración</a>
                             </li>
                             <li class="nav-item"><a class="nav-link" href="../disenoweb/index.html">Diseño Web</a></li>
                             <li class="nav-item"><a class="nav-link" href="../stagedesing/index.html">Stage Design</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="../storyboard/index.html">Storyboard /
-                                    Animación</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../storyboard/index.html">Storyboard / Animación</a></li>
                             <li class="nav-item"><a class="nav-link" href="../juego/index.html">Juego</a></li>
                         </ul>
-                    </div>
+                    </div>  
                 </div>
-            </nav>
         </header>
 
         <!-- Main Content -->
-        <main class="container">
+        <main class="container mt-5 pt-5">
             <div class="row justify-content-center">
                 <section class="col-sm-6 col-md-4">
                     <div id="instrucciones">
                         <h1 class="titulopaginasc"> Solicitudes Laborales MEMORY GAME </h1>
                         <p>¡Presta mucha atención, porque la memoria será tu mejor aliada para ganar las 3 rondas!</p>
-
-                        <p>La dinámica es sencilla: si un jugador encuentra una pareja, podrá seguir jugando en su
-                            turno. Sin embargo, si no lo logra, el turno pasa al otro jugador. Cuantas más parejas
-                            encuentres en tu turno, mayores serán tus posibilidades de obtener la victoria al final de
-                            las rondas. ¡Prepárate para competir y demostrar quién tiene la mejor memoria!</p>
+                        <p>La dinámica es sencilla: si un jugador encuentra una pareja, podrá seguir jugando en su turno. Sin embargo, si no lo logra, el turno pasa al otro jugador. Cuantas más parejas encuentres en tu turno, mayores serán tus posibilidades de obtener la victoria al final de las rondas. ¡Prepárate para competir y demostrar quién tiene la mejor memoria!</p>
                     </div>
 
                     <div id="pjuego">
                         <h5>¡Presta mucha atención, porque la memoria será tu mejor aliada</h5>
                     </div>
                 </section>
+
                 <div class="col-sm-6 col-md-4 text-center">
-                    <div id="tablero" class="tablero"></div>
-                    <button id="btnStart">Iniciar Juego</button>
-                    <div id="resultadoTurno"></div>
-                    <p id="turnoActual">Turno de: Jugador 1</p>
-                    <button id="btnNextRound" disabled>Siguiente Ronda</button>
+                    <div id="tablero" class="tablero" role="region" aria-live="polite"></div>
+                    <button id="btnStart" aria-label="Iniciar Juego">Iniciar Juego</button>
+                    <div id="resultadoTurno" role="alert"></div>
+                    <p id="turnoActual" aria-live="polite">Turno de: Jugador 1</p>
+                    <button id="btnNextRound" disabled aria-label="Ir a la siguiente ronda">Siguiente Ronda</button>
                     <p id="rondaActual">Ronda: 1</p>
-
-
-
-
                 </div>
             </div>
         </main>

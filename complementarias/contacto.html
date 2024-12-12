@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACTO // Florencia Leon Portfolio</title>
+    <meta name="description" content="Formulario de contacto del portfolio de Florencia León, estudiante de Artes Multimediales. Contáctame para colaboraciones o consultas.">
+    <title>Contacto - Portfolio de Florencia León</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -14,7 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html">Florencia Leon</a>
+                <a class="navbar-brand" href="../index.html">Florencia León</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -36,27 +37,30 @@
         <div class="container mt-5">
             <h2>Formulario de Contacto</h2>
             <form class="needs-validation" id="contactForm" action="https://formspree.io/f/xgvebwkd" method="POST" novalidate>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Ingresa tu nombre" required>
-                    <div class="invalid-feedback">
-                        Por favor, ingresa tu nombre.
+                <fieldset>
+                    <legend class="visually-hidden">Información de contacto</legend>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Ingresa tu nombre" required aria-label="Campo para ingresar tu nombre">
+                        <div class="invalid-feedback">
+                            Por favor, ingresa tu nombre.
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
-                    <div class="invalid-feedback">
-                        Por favor, ingresa un correo electrónico válido.
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo electrónico" required aria-label="Campo para ingresar tu correo electrónico">
+                        <div class="invalid-feedback">
+                            Por favor, ingresa un correo electrónico válido.
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
-                    <div class="invalid-feedback">
-                        Por favor, ingresa tu mensaje.
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí" required aria-label="Campo para ingresar tu mensaje"></textarea>
+                        <div class="invalid-feedback">
+                            Por favor, ingresa tu mensaje.
+                        </div>
                     </div>
-                </div>
+                </fieldset>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
         </div>
